@@ -10,11 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170830142949) do
+ActiveRecord::Schema.define(version: 20170830192442) do
+
+  create_table "suggestions", force: :cascade do |t|
+    t.string "name"
+    t.integer "votes"
+    t.datetime "purchase_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.integer "votes", default: 3
     t.boolean "suggestions", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "email"
+    t.string "password_digest"
+  end
+
+  create_table "votes", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "suggestion_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

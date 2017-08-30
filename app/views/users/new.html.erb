@@ -1,0 +1,36 @@
+<h1>Signup!</h1>
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <%= form_for @user, url: { action: "create" }, html: { class: "form-horizontal", role: "form" } do |f|  %>
+      <div class="form-group">
+        <div class="control-label col-md-2">
+          <%= f.label :email %>
+        </div>
+        <div class="col-md-8">
+          <%= f.email_field :email, class: "form-control", placeholder: "Email", autofocus: true %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="control-label col-md-2">
+          <%= f.label :password %>
+        </div>
+        <div class="col-md-8">
+          <%= f.password_field :password, class: "form-control", placeholder: "Password" %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="control-label col-md-2">
+          <%= f.label :password_confirmation %>
+        </div>
+        <div class="col-md-8">
+          <%= f.password_field :password_confirmation, class: "form-control", placeholder: "Password Confirmation" %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-md-8">
+          <%= f.submit "Sign Up", class: "btn btn-default btn-lg" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
