@@ -43,6 +43,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.6'
   gem 'rspec-core', '~> 3.6'
   gem 'selenium-webdriver'
+  gem 'unirest', '~> 1.1', '>= 1.1.2'
+  gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
 end
 
 group :test do
