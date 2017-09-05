@@ -1,1 +1,22 @@
 <h1>Votes</h1>
+
+<div class="container">
+  <table class="table">
+    <tr>
+      <th>Snack</th>
+      <th>Always Available</th>
+      <th>Purchase Locations</th>
+      <th>Purchase Count</th>
+      <th>Last Purchase Date</th>
+    </tr>
+    <% @snacks.each do |snack| %>
+      <tr>
+        <td><%= snack["name"] %></td>
+        <td><%= snack["optional"] %></td>
+        <td><%= snack["purchaseLocations"] %></td>
+        <td><%= snack["purchaseCount"] %></td>
+        <td><%= snack["lastPurchaseDate"] %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>

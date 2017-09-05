@@ -10,4 +10,5 @@ Rails.application.routes.draw do
 
   get "/voting" => "votes#index"
   get "/suggestions" => "suggestions#index"
+
 end
